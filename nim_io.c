@@ -19,3 +19,18 @@ void plateau_afficher(const int plateau[], int nb_colonnes) {
 		}
 	}
 }
+
+void tour_humain(int plateau[], int nb_colonnes) {
+	int colonne;
+	int nb_pieces;
+	printf("Choisissez la colonne");
+	colonne=ihm_choisir_colonne();
+	printf("Combien de pièce voulez vous prendre?");
+	scanf("%d", &nb_pieces);
+	nim_jouer_tour(plateau, nb_colonnes, colonne, nb_pieces);
+
+}
+
+void tour_ia(int plateau[], int nb_colonnes, double difficulte) {
+	nim_choix_ia(plateau, nb_colonnes, difficulte, );
+}
